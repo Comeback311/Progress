@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px;
+}
+.content__block {
+  padding: 20px 30px;
+}
+
+.progress__loader {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.progress_hidden {
+  opacity: 0;
+}
+
+.config {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.config__row {
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox {
+  vertical-align: top;
+  height: 26px;
+  width: 0;
+  margin: 1px 0;
+}
+.checkbox + label {
+  cursor: pointer;
+  height: 26px;
+  line-height: 26px;
+  display: block;
+}
+.checkbox + label::-moz-selection {
+  background: transparent;
+}
+.checkbox + label::selection {
+  background: transparent;
+}
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative;
+  padding-left: 50px;
+}
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 26px;
+  border-radius: 13px;
+  background: #4A4A4A;
+  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #D8D8D8;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: left .2s;
+          -o-transition: left .2s;
+          transition: left .2s;
+}
+.checkbox:checked + label:before {
+  background: #7ED321;
+}
+.checkbox:checked + label:after {
+  left: 16px;
+  background: #fff;
+}
+
+.input_rounded {
+  width: 40px;
+  border-radius: 13px;
+  border: 1px solid #000;
+  display: block;
+  height: 26px;
+  text-align: center;
+}
+.input_rounded:focus {
+  outline: none;
+}
+.input_rounded + label {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.input_rounded + label::-moz-selection {
+  background: transparent;
+}
+.input_rounded + label::selection {
+  background: transparent;
+}
+.input_rounded::-webkit-input-placeholder {
+  text-align: center;
+}
+.input_rounded:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+.input_rounded::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+.input_rounded:-ms-input-placeholder {
+  text-align: center;
+}
+.input_failed {
+  border: 1px solid red;
+}

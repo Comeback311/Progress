@@ -1,0 +1,44 @@
+.input {
+	
+	&_rounded {
+		width: 40px;
+		border-radius: 13px;
+		border: 1px solid #000;
+		display: block;
+		height: 26px;
+		text-align: center;
+
+		&:focus {
+			outline: none;
+		}
+
+		& + label {
+			padding-left: 10px;
+			cursor: pointer;
+
+			&::selection {
+				background: transparent;
+			}
+		}
+
+		&::-webkit-input-placeholder {
+			text-align:center;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+			text-align:center;  
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+			text-align:center;  
+		}
+
+		&:-ms-input-placeholder {  
+			text-align:center; 
+		}
+	}
+
+	&_failed {
+		border: 1px solid red;
+	}
+}

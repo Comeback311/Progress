@@ -1,0 +1,10 @@
+.progress {
+
+	&__loader {
+	  transform: rotate(-90deg);
+	}
+
+	&_hidden {
+		opacity: 0;
+	}
+}
