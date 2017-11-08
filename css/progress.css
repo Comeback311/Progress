@@ -54,16 +54,20 @@ table {
 
 .content {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   padding: 50px;
 }
 .content__block {
@@ -81,19 +85,23 @@ table {
 
 .config {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 .config__row {
   margin: 5px 0;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -133,8 +141,7 @@ table {
   height: 26px;
   border-radius: 13px;
   background: #4A4A4A;
-  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 .checkbox:not(checked) + label:after {
   content: '';
@@ -145,10 +152,8 @@ table {
   height: 22px;
   border-radius: 10px;
   background: #D8D8D8;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: left .2s;
-          -o-transition: left .2s;
           transition: left .2s;
 }
 .checkbox:checked + label:before {
@@ -159,6 +164,9 @@ table {
   background: #fff;
 }
 
+.input {
+  box-sizing: border-box;
+}
 .input_rounded {
   width: 40px;
   border-radius: 13px;
