@@ -1,34 +1,37 @@
-<head>
-	<meta charset="utf8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/progress.css">
-	<title>Progress</title>
-</head>
-<body>
-	
-	<div class="content">
-		<div class="progress content__block">
-			<canvas class="progress__loader" width="150" height="150">
-				Your browser does not support HTML5 Canvas.
-			</canvas>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/progress.css">
+		<title>Progress</title>
+	</head>
+	<body>
+		
+		<div class="content">
+			<div class="progress content__block">
+				<canvas class="progress__loader" width="150" height="150">
+					Your browser does not support HTML5 Canvas.
+				</canvas>
+			</div>
+			<div class="config content__block">
+				<div class="config__row">
+					<input type="text" class="input input_rounded" id="input-value" placeholder="100" maxlength="3">
+					<label for="input-value">Value</label>
+				</div>
+				<div class="config__row">
+					<input type="checkbox" class="checkbox" id="checkbox-animate"/>
+					<label for="checkbox-animate">Animate</label>
+				</div>
+				<div class="config__row">
+					<input type="checkbox" class="checkbox" id="checkbox-hide"/>
+					<label for="checkbox-hide">Hide</label>
+				</div>
+			</div>
 		</div>
-		<div class="config content__block">
-			<div class="config__row">
-				<input type="text" class="input input_rounded" id="input-value" placeholder="100" maxlength="3">
-				<label for="input-value">Value</label>
-			</div>
-			<div class="config__row">
-				<input type="checkbox" class="checkbox" id="checkbox-animate"/>
-				<label for="checkbox-animate">Animate</label>
-			</div>
-			<div class="config__row">
-				<input type="checkbox" class="checkbox" id="checkbox-hide"/>
-				<label for="checkbox-hide">Hide</label>
-			</div>
-		</div>
-	</div>
 
-	<!-- <script src="js/progress.js"></script> -->
-	<script src="js/progress_babel.js"></script>	
-</body>
+		<!-- <script src="js/progress.js"></script> -->
+		<script src="js/progress_babel.js"></script>	
+	</body>
+</html>
