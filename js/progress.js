@@ -82,13 +82,8 @@ class loader {
 
 			this.degree = this.limit;
 
-			this.fillCircle();
-
-			this.fillCircleMark();
-
-			this.insideCircle();
-
-			this.last = this.limit;
+			// Рисование лоадера
+			this.draw();
 			return true;
 		}
 
@@ -124,8 +119,12 @@ class loader {
 				this.requestId = requestAnimationFrame(() => this.loading());
 		}
 
-		// Запоминаем предыдущее значение
-		this.last = this.degree;
+		// Рисование лоадера
+		this.draw();
+	}
+
+	// Рисование лоадера
+	draw() {
 
 		this.clearCanvas();
 
@@ -137,6 +136,9 @@ class loader {
 
 		// Внутренняя белая часть
 		this.insideCircle();
+
+		// Запоминаем предыдущее значение
+		this.last = this.degree;
 	}
 
 	// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
